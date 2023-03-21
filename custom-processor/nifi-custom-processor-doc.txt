@@ -1,0 +1,11 @@
+https://cwiki.apache.org/confluence/display/NIFI/Maven+Projects+for+Extensions#MavenProjectsforExtensions-Inheritance
+
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.nifi -DarchetypeArtifactId=nifi-processor-bundle-archetype -DarchetypeVersion=1.13.1 -DnifiVersion=1.13.1
+
+Define value for property 'groupId': com.sample
+Define value for property 'artifactId': sample-nifi-bundle
+Define value for property 'version' 1.0-SNAPSHOT: : 0.0.1-SNAPSHOT
+Define value for property 'artifactBaseName': sample
+Define value for property 'package' com.sample.processors.sample : com.sample.processors
+

@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "5d327aa3-42a1-4bc4-b4f4-f5f570c1dcb6",
+		"name": "NiFi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stop-process-group",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5426ec06-0178-1000-0000-00007157565a\",\r\n    \"state\": \"STOPPED\",\r\n    \"disconnectedNodeAcknowledged\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/flow/process-groups/5426ec06-0178-1000-0000-00007157565a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"flow",
+						"process-groups",
+						"5426ec06-0178-1000-0000-00007157565a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start-process-group",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5426ec06-0178-1000-0000-00007157565a\",\r\n    \"state\": \"RUNNING\",\r\n    \"disconnectedNodeAcknowledged\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/flow/process-groups/5426ec06-0178-1000-0000-00007157565a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"flow",
+						"process-groups",
+						"5426ec06-0178-1000-0000-00007157565a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processor-clear-state",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/processors/5439f017-0178-1000-0000-000069129899/state/clear-requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"processors",
+						"5439f017-0178-1000-0000-000069129899",
+						"state",
+						"clear-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controller-service-disabled",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5426ec06-0178-1000-0000-00007157565a\",\r\n    \"state\": \"DISABLED\",\r\n    \"disconnectedNodeAcknowledged\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/flow/process-groups/5426ec06-0178-1000-0000-00007157565a/controller-services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"flow",
+						"process-groups",
+						"5426ec06-0178-1000-0000-00007157565a",
+						"controller-services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controller-service-enabled",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5426ec06-0178-1000-0000-00007157565a\",\r\n    \"state\": \"ENABLED\",\r\n    \"disconnectedNodeAcknowledged\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/flow/process-groups/5426ec06-0178-1000-0000-00007157565a/controller-services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"flow",
+						"process-groups",
+						"5426ec06-0178-1000-0000-00007157565a",
+						"controller-services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-processor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/processors/57aef628-0178-1000-ffff-ffff86298fb1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"processors",
+						"57aef628-0178-1000-ffff-ffff86298fb1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-processor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"revision\": {\r\n\t    \"clientId\": \"57aef628-0178-1000-ffff-ffff86298fb1\",\r\n\t    \"version\": 4,\r\n\t    \"lastModifier\": \"\"\r\n\t},\r\n    \"id\": \"57aef628-0178-1000-ffff-ffff86298fb1\",\r\n    \"component\": {\r\n         \"id\":\"57aef628-0178-1000-ffff-ffff86298fb1\",\r\n\t    \"config\": {\r\n\t\t    \"properties\": {\r\n\t\t        \"generate-ff-custom-text\": \"abc\"\r\n\t\t    }\r\n\t\t}\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/processors/57aef628-0178-1000-ffff-ffff86298fb1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"processors",
+						"57aef628-0178-1000-ffff-ffff86298fb1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-process-group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"revision\": {\r\n    \"clientId\": \"41d9a04c-0178-1000-0000-0000184f1bfd\",\r\n    \"version\": 0,\r\n    \"lastModifier\": \"\"\r\n    },\r\n    \"id\": \"41d9a04c-0178-1000-0000-0000184f1bfd\",\r\n   \"position\":{\r\n    \"x\": 1000.0,\r\n    \"y\": 1000.0\r\n   },\r\n   \"component\": {\r\n   \"name\": \"test-group\",\r\n   \"parentGroupId\": \"41d9a04c-0178-1000-0000-0000184f1bfd\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/process-groups/41d9a04c-0178-1000-0000-0000184f1bfd/process-groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"process-groups",
+						"41d9a04c-0178-1000-0000-0000184f1bfd",
+						"process-groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "instantiate-template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originX\": 0.0,\r\n    \"originY\": 0.0,\r\n    \"templateId\": \"e67e65cb-f55c-39a8-84a5-bff908b01f39\",\r\n    \"disconnectedNodeAcknowledged\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/process-groups/71d0cb08-0178-1000-ffff-ffff94c21fc7/template-instance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"process-groups",
+						"71d0cb08-0178-1000-ffff-ffff94c21fc7",
+						"template-instance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload-template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "template",
+							"type": "file",
+							"src": "/C:/Users/mohit/Downloads/session-2703-2.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7071/nifi-api/process-groups/71d0cb08-0178-1000-ffff-ffff94c21fc7/templates/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"nifi-api",
+						"process-groups",
+						"71d0cb08-0178-1000-ffff-ffff94c21fc7",
+						"templates",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
